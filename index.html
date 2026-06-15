@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Блог - Головна</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+	<header class="bg-indigo-600 text-white shadow-md">
+		<div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+			<h1 class="text-2xl font-bold tracking-tight">DevBlog</h1>
+			
+			<nav class="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+				<ul class="flex gap-4 text-sm font-medium">
+					<li><a href="index.html" class="hover:text-indigo-200 transition">Головна</a></li>
+					<li><a href="profile.html" class="hover:text-indigo-200 transition">Профіль</a></li>
+					<li><a href="about.html" class="hover:text-indigo-200 transition">Про додаток</a></li>
+				</ul>
+				
+				<div class="flex gap-2">
+					<a href="login.html" class="bg-indigo-500 px-4 py-1.5 rounded-lg text-sm hover:bg-indigo-400 transition border border-indigo-400">
+						Вхід
+					</a>
+					<a href="registration.html" class="border border-white px-4 py-1.5 rounded-lg text-sm hover:bg-white hover:text-indigo-600 transition">
+						Реєстрація
+					</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        
+        <section class="mb-10 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+            <h2 class="text-xl font-semibold mb-4 text-gray-800">Створити новий допис</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Назва допису</label>
+                    <input type="text" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Введіть заголовок...">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Текст повідомлення</label>
+                    <textarea rows="3" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Про що хочете розповісти?"></textarea>
+                </div>
+                <button type="button" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition">Опублікувати</button>
+            </form>
+        </section>
+
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-gray-800 border-b pb-2">Стрічка новин</h2>
+
+            <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <div class="flex justify-between items-start">
+                    <h3 class="text-xl font-bold text-indigo-600">Основи HTML та CSS</h3>
+                    <button class="text-red-500 hover:text-red-700 text-sm">Вилучити</button>
+                </div>
+                <p class="text-gray-600 mt-2">Сьогодні ми вивчаємо, як будувати статичні інтерфейси за допомогою сучасних фреймворків. Це допомагає пришвидшити розробку в рази!</p>
+                
+                <div class="mt-6 border-t pt-4">
+                    <h4 class="font-semibold text-gray-700 mb-3">Коментарі:</h4>
+                    <ul class="space-y-3 mb-4">
+                        <li class="bg-gray-50 p-3 rounded text-sm flex justify-between">
+                            <span><strong>Олексій:</strong> Дуже корисна інформація!</span>
+                            <button class="text-gray-400 hover:text-red-500">×</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="flex gap-2">
+                        <input type="text" class="flex-grow border border-gray-300 rounded-md px-3 py-1 text-sm" placeholder="Напишіть коментар...">
+                        <button class="bg-gray-200 px-3 py-1 rounded-md text-sm hover:bg-gray-300 transition">Додати</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6 mt-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Всі права захищені. Лабораторна робота №1.</p>
+        </div>
+    </footer>
+	<script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+    
+    <script src="app.js"></script>
+	<script src="auth.js"></script>
+</body>
+</html>

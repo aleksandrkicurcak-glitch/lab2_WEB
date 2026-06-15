@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід - DevBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+	<header class="bg-indigo-600 text-white shadow-md">
+		<div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+			<h1 class="text-2xl font-bold tracking-tight">DevBlog</h1>
+			
+			<nav class="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+				<ul class="flex gap-4 text-sm font-medium">
+					<li><a href="index.html" class="hover:text-indigo-200 transition">Головна</a></li>
+					<li><a href="profile.html" class="hover:text-indigo-200 transition">Профіль</a></li>
+					<li><a href="about.html" class="hover:text-indigo-200 transition">Про додаток</a></li>
+				</ul>
+				
+				<div class="flex gap-2">
+					<a href="login.html" class="bg-indigo-500 px-4 py-1.5 rounded-lg text-sm hover:bg-indigo-400 transition border border-indigo-400">
+						Вхід
+					</a>
+					<a href="registration.html" class="border border-white px-4 py-1.5 rounded-lg text-sm hover:bg-white hover:text-indigo-600 transition">
+						Реєстрація
+					</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="max-w-md w-full bg-white shadow-xl rounded-xl border border-gray-100 p-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900">Вітаємо знову!</h2>
+                <p class="text-gray-500 mt-2">Будь ласка, увійдіть у свій акаунт</p>
+            </div>
+
+            <form action="#" class="space-y-6">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Електронна пошта</label>
+                    <input type="email" id="email" name="email" required 
+                        class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition" 
+                        placeholder="your@email.com">
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Пароль</label>
+                    <input type="password" id="password" name="password" required 
+                        class="mt-1 block w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition" 
+                        placeholder="••••••••">
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">Запам'ятати мене</label>
+                    </div>
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Забули пароль?</a>
+                    </div>
+                </div>
+
+                <button type="submit" 
+                    class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition">
+                    Увійти
+                </button>
+            </form>
+
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Ще не маєте акаунту? 
+                    <a href="registration.html" class="font-medium text-indigo-600 hover:text-indigo-500">Зареєструватися</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Всі права захищені. Лабораторна робота №1.</p>
+        </div>
+    </footer>
+	<script src="auth.js"></script>
+</body>
+</html>
