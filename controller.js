@@ -1,13 +1,12 @@
-// controller.js
+
 class BlogController {
     constructor(model, view) {
         this.model = model;
         this.view = view;
 
-        // Початковий рендер
+
         this.onPostsChanged(this.model.posts);
 
-        // Прив'язуємо методи View до функцій Model
         this.view.bindAddPost(this.handleAddPost);
         this.view.bindDeletePost(this.handleDeletePost);
         this.view.bindAddComment(this.handleAddComment);
