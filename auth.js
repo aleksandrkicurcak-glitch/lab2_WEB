@@ -1,4 +1,4 @@
-// auth.js
+
 function getCurrentUser() {
     return JSON.parse(localStorage.getItem('devblog_current_user'));
 }
@@ -9,9 +9,8 @@ function logout() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Оновлення навігації (для всіх сторінок)
     const currentUser = getCurrentUser();
-    const navDiv = document.querySelector('nav .flex.gap-2'); // Знаходимо блок з кнопками входу
+    const navDiv = document.querySelector('nav .flex.gap-2'); 
     if (navDiv && currentUser) {
         navDiv.innerHTML = `
             <span class="text-sm font-medium flex items-center mr-3 text-indigo-900">Привіт, ${currentUser.name}!</span>
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    // 2. Логіка сторінки реєстрації
     const isRegistrationPage = document.querySelector('input[value="male"]');
     if (isRegistrationPage) {
         const form = document.querySelector('form');
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Логіка сторінки входу
     const isLoginPage = document.querySelector('input[id="remember-me"]');
     if (isLoginPage) {
         const form = document.querySelector('form');
