@@ -1,25 +1,25 @@
-// view.js
+
 class BlogView {
     constructor() {
         this.app = document.querySelector('main');
         
-        // Знаходимо форму створення поста
+
         this.postForm = document.querySelector('form');
         this.titleInput = this.postForm.querySelector('input[type="text"]');
         this.contentInput = this.postForm.querySelector('textarea');
         this.submitButton = this.postForm.querySelector('button');
 
-        // Знаходимо контейнер для стрічки новин
+
         this.feedContainer = document.querySelector('section.space-y-6');
     }
 
-    // Очищення полів форми
+
     _resetInput() {
         this.titleInput.value = '';
         this.contentInput.value = '';
     }
 
-    // Рендер усіх постів
+
     displayPosts(posts) {
         const titleH2 = this.feedContainer.querySelector('h2');
         this.feedContainer.innerHTML = '';
@@ -40,7 +40,7 @@ class BlogView {
             const article = document.createElement('article');
             article.className = 'bg-white p-6 rounded-lg shadow-sm border border-gray-200 mt-6';
             
-            // Генерація коментарів (кнопка вилучення тільки для автора коментаря)
+
             const commentsHTML = post.comments.map(comment => {
                 const canDelete = comment.authorEmail === userEmail;
                 return `
@@ -50,7 +50,7 @@ class BlogView {
                 </li>`;
             }).join('');
 
-            // Кнопка вилучення поста (тільки для автора поста)
+   
             const canDeletePost = post.authorEmail === userEmail;
 
             article.innerHTML = `
@@ -79,7 +79,7 @@ class BlogView {
         });
     }
 
-    // Прив'язка подій для Контролера
+
     bindAddPost(handler) {
         this.submitButton.addEventListener('click', event => {
             event.preventDefault();
