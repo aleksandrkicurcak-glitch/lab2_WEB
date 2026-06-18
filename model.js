@@ -1,7 +1,6 @@
-// model.js
+
 class BlogModel {
     constructor() {
-        // Ініціалізуємо пости з localStorage або створюємо порожній масив 
         this.posts = JSON.parse(localStorage.getItem('devblog_posts')) || [];
     }
 
@@ -18,8 +17,8 @@ class BlogModel {
             id: Date.now().toString(),
             title: title,
             content: content,
-            authorName: currentUser.name, // Прив'язка імені
-            authorEmail: currentUser.email, // Прив'язка email для перевірки прав
+            authorName: currentUser.name, 
+            authorEmail: currentUser.email, 
             comments: []
         };
         this.posts.push(post);
